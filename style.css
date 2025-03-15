@@ -1,0 +1,488 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Consolas', 'Monospace';
+}
+
+/* Header Styling */
+header {
+    background-color: #0a0a0a;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+/* Logo */
+.logo {
+    color: #0f0; /* Neon Green */
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect: Underline with ::after */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #0f0; /* Neon Green */
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #0f0; /* Neon Green */
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('bg.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Typing Effect */
+.name {
+    color: #0f0; /* Neon Green */
+}
+
+.typing {
+    color: #0f0;
+    font-weight: bold;
+}
+
+/* Button Style */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #0f0;
+    text-decoration: none;
+    border: 2px solid #0f0;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #0f0;
+    color: #000;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* About Me Section */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 10%;
+    background: #0a0a0a;
+    color: white;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #0f0; /* Neon Green Border */
+    box-shadow: 0 0 15px #0f0;
+}
+
+/* Glitch Effect */
+.about-content h2 {
+    font-size: 32px;
+    color: #0f0;
+    position: relative;
+    display: inline-block;
+    animation: glitch 1s infinite alternate;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #bbb;
+}
+
+.highlight {
+    color: #0f0;
+    font-weight: bold;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #0f0;
+    text-decoration: none;
+    border: 2px solid #0f0;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #0f0;
+    color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-image img {
+        width: 150px;
+        height: 150px;
+    }
+}
+/* Glitch Keyframes */
+@keyframes glitch {
+    0% { text-shadow: 2px 2px #f00, -2px -2px #00f; }
+    25% { text-shadow: -2px -2px #f00, 2px 2px #00f; }
+    50% { text-shadow: 2px -2px #f00, -2px 2px #00f; }
+    75% { text-shadow: -2px 2px #f00, 2px -2px #00f; }
+    100% { text-shadow: 0px 0px #0f0; }
+}
+
+/* Projects Section */
+.projects {
+    padding: 80px 10%;
+    background: url('mypro.jpg') no-repeat center center/cover;
+    text-align: center;
+}
+
+.projects h2 {
+    color: #0f0;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+/* Projects Grid */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+/* Project Card */
+.project-card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+}
+
+/* Project Images */
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Project Titles */
+.project-card h3 {
+    color: #0f0;
+    margin: 15px 0;
+}
+
+/* Project Description */
+.project-card p {
+    color: #bbb;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #0f0;
+    text-decoration: none;
+    border: 2px solid #0f0;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #0f0;
+    color: #000;
+}
+/* Career Section */
+.career {
+    padding: 80px 10%;
+    background: #000;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+/* Adding a Semi-Transparent Overlay */
+.career::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 50% Opacity */
+    z-index: 1;
+}
+
+/* Ensure Content is Above the Overlay */
+.career h2, .timeline {
+    position: relative;
+    z-index: 2;
+}
+
+.career h2 {
+    color: #0f0;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    background: #1a1a1a;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.timeline-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+}
+
+.icon {
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.content h3 {
+    color: #0f0;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.content p {
+    color: #bbb;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .icon {
+        margin-bottom: 10px;
+    }
+}
+/* Initial State (Hidden & Slightly Lower) */
+.timeline-item {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When in View (Fully Visible) */
+.timeline-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Contact Section */
+.contact {
+    padding: 80px 10%;
+    background: #0a0a0a;
+    text-align: center;
+    color: white;
+}
+
+.contact h2 {
+    color: #0f0;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 10%;
+    background: #0a0a0a;
+    text-align: center;
+    color: white;
+}
+
+/* Contact Heading */
+.contact h2 {
+    color: #0f0;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Contact Form Container */
+.contact-container {
+    display: flex;
+    flex-direction: column; /* Stack form & links */
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Contact Form */
+.contact-form {
+    background: rgba(26, 26, 26, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input Fields */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #111;
+    border: 2px solid #0f0;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Button */
+.btn {
+    padding: 10px;
+    font-size: 18px;
+    color: #0f0;
+    background: transparent;
+    border: 2px solid #0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0f0;
+    color: #000;
+}
+
+/* Social Media Links (Now Below Form) */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #0f0;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #0f0;
+}
