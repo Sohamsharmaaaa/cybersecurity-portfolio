@@ -153,6 +153,7 @@ header {
     box-shadow: 0 0 15px #0f0;
 }
 
+
 /* Glitch Effect */
 .about-content h2 {
     font-size: 32px;
@@ -569,3 +570,18 @@ header {
         grid-template-columns: 1fr;
     }
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+.navbar, .hero, .about, .projects, .career, .contact {
+    max-width: 100%;
+    overflow: hidden;
+}
+
