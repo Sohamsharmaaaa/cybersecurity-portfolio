@@ -585,3 +585,26 @@ html, body {
     overflow: hidden;
 }
 
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+}
+.contact-form {
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .logo {
+        font-size: 20px; /* Reduce font size for mobile */
+    }
+    .navbar {
+        padding: 10px;
+    }
+}
